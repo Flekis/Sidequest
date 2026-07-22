@@ -5,28 +5,45 @@ body {
     background-size: cover;
 }
 
-/* Container für Buttons */
+/* Zentrierter Bereich */
 #scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    justify-content: flex-start;
+    padding-top: 60px;
+    width: 100%;
 }
 
-/* Responsive Buttons */
+/* Holztafel-Buttons */
 button {
     display: block;
     margin: 15px auto;
     padding: 1rem 2rem;
+    width: clamp(220px, 50%, 300px);
     font-size: clamp(16px, 2vw, 22px);
-    width: clamp(200px, 50%, 300px);
-    background: #f2e4c6;
-    border: 3px solid #4b2e12;
-    border-radius: 10px;
+
+    background: url('https://i.imgur.com/3YQZQ8M.jpeg');
+    background-size: cover;
+    background-position: center;
+
+    color: #3b2412;
+    font-weight: bold;
+
+    border: 4px solid #4b2e12;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Popup Overlay */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* Popup */
 #popup {
     position: fixed;
     top: 0;
@@ -44,12 +61,12 @@ button {
     display: none;
 }
 
-/* Popup Inhalt */
 #popup-content {
     background: #f7e9d3;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     width: 80%;
     max-width: 400px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
