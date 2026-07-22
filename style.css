@@ -22,7 +22,7 @@ body {
 
 
 /* =========================
-   STANDARD 1920x1080
+   STANDARD PC 1920x1080
    ========================= */
 
 
@@ -78,9 +78,9 @@ body {
 
 
 
-
-
-/* Buttons */
+/* =========================
+   BUTTONS STANDARD
+   ========================= */
 
 
 button {
@@ -168,9 +168,9 @@ button:hover {
 
 
 
-
 /* =========================
    TABLET
+   600px - 1199px
    ========================= */
 
 
@@ -179,14 +179,15 @@ button:hover {
 
     #scroll {
 
-        padding-top: 130px;
+        padding-top: 180px;
 
     }
 
 
+
     #scroll h1 {
 
-        font-size: 36px;
+        font-size: 42px;
 
     }
 
@@ -194,7 +195,64 @@ button:hover {
 
     button {
 
-        width: 240px;
+        width: 270px;
+
+
+        font-size: 20px;
+
+
+        padding: 0.9rem 1.8rem;
+
+
+        margin: 12px auto;
+
+    }
+
+}
+
+
+
+
+
+/* =========================
+   HANDY
+   bis 599px
+   ========================= */
+
+
+@media (max-width: 599px) {
+
+
+    #scroll {
+
+        /*
+        bleibt nahe an der PC Position,
+        damit es auf der Rolle bleibt
+        */
+
+        padding-top: 170px;
+
+    }
+
+
+
+    #scroll h1 {
+
+        font-size: 38px;
+
+    }
+
+
+
+    button {
+
+
+        /*
+        nicht zu klein,
+        weil die Schriftrolle groß bleibt
+        */
+
+        width: 250px;
 
 
         font-size: 18px;
@@ -209,48 +267,6 @@ button:hover {
 
 }
 
-
-
-
-/* =========================
-   HANDY
-   ========================= */
-
-
-@media (max-width: 599px) {
-
-
-    #scroll {
-
-        padding-top: 90px;
-
-    }
-
-
-    #scroll h1 {
-
-        font-size: 26px;
-
-    }
-
-
-
-    button {
-
-        width: 180px;
-
-
-        font-size: 14px;
-
-
-        padding: 0.6rem 1rem;
-
-
-        margin: 8px auto;
-
-    }
-
-}
 
 
 
@@ -281,6 +297,7 @@ button:hover {
 
     align-items: center;
 
+
 }
 
 
@@ -296,13 +313,16 @@ button:hover {
 
 #popup-content {
 
-    background: #f7e9d3;
+
+    background:
+        #f7e9d3;
 
 
     padding: 25px;
 
 
-    width: min(80vw, 400px);
+    width:
+        min(80vw, 400px);
 
 
     border-radius: 12px;
