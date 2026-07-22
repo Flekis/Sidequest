@@ -283,7 +283,7 @@ button:hover {
     #scroll {
 
 
-        padding-top: 230px;
+        padding-top: 330px;
 
     }
 
@@ -292,7 +292,7 @@ button:hover {
     #scroll h1 {
 
 
-        font-size: 32px;
+        font-size: 40px;
 
     }
 
@@ -302,16 +302,16 @@ button:hover {
     button {
 
 
-        width: 230px;
+        width: 270px;
 
 
-        font-size: 16px;
+        font-size: 19px;
 
 
-        padding: 0.7rem 1.2rem;
+        padding: 0.9rem 1.5rem;
 
 
-        margin: 8px auto;
+        margin: 10px auto;
 
     }
 
