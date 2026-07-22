@@ -1,52 +1,71 @@
-/* Grundseite */
-
 body {
+
     margin: 0;
+
     font-family: Papyrus, serif;
 
-    background: url('scroll.jpeg') no-repeat center center fixed;
+
+    background:
+        url('scroll.jpeg')
+        no-repeat
+        center center
+        fixed;
+
+
     background-size: cover;
 
+
     overflow-x: hidden;
+
 }
 
 
-/* Hauptbereich */
+
+/* =========================
+   STANDARD 1920x1080
+   ========================= */
+
+
 #scroll {
 
     display: flex;
+
     flex-direction: column;
 
+
     align-items: center;
+
+
     justify-content: flex-start;
 
 
-    /* Originalwert deiner ersten Version */
-    padding-top: 180px;
+    padding-top: 190px;
 
 
     width: 100%;
+
+
     min-height: 100vh;
 
 
     text-align: center;
 
+
     box-sizing: border-box;
+
 }
 
 
-
-/* Überschrift */
 
 #scroll h1 {
 
     margin: 0;
 
+
     padding-top: 10px;
 
 
-    /* Originalgröße wird kleiner bei kleineren Fenstern */
-    font-size: clamp(24px, 3vw, 48px);
+    font-size: 48px;
 
 
     color: #2f1d0d;
@@ -59,46 +78,43 @@ body {
 
 
 
+
+
 /* Buttons */
+
 
 button {
 
     display: block;
 
 
-    /* Original 300px bei 1920x1080 */
-    width: clamp(180px, 15.6vw, 300px);
+    width: 300px;
 
 
-    margin:
-        clamp(8px, 0.8vw, 15px)
-        auto;
+    margin: 15px auto;
 
 
-    padding:
-        clamp(8px, 1vw, 16px)
-        clamp(15px, 1.5vw, 32px);
+    padding: 1rem 2rem;
 
 
-
-    font-size:
-        clamp(12px, 1.15vw, 22px);
-
+    font-size: 22px;
 
 
     font-family: Papyrus, serif;
+
 
     font-weight: bold;
 
 
 
     background:
-        linear-gradient(
-            135deg,
-            #c8a46a 0%,
-            #b08956 50%,
-            #8a6a3f 100%
-        );
+
+    linear-gradient(
+        135deg,
+        #c8a46a 0%,
+        #b08956 50%,
+        #8a6a3f 100%
+    );
 
 
 
@@ -107,14 +123,12 @@ button {
 
 
     border:
-        clamp(2px, 0.2vw, 4px)
-        solid
-        #4b2e12;
+
+    4px solid #4b2e12;
 
 
 
-    border-radius:
-        clamp(6px, 0.6vw, 12px);
+    border-radius: 12px;
 
 
 
@@ -127,6 +141,7 @@ button {
 
 
     cursor: pointer;
+
 
 
     transition:
@@ -151,17 +166,98 @@ button:hover {
 }
 
 
-button:active {
 
-    transform: scale(0.97);
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+
+
+    #scroll {
+
+        padding-top: 130px;
+
+    }
+
+
+    #scroll h1 {
+
+        font-size: 36px;
+
+    }
+
+
+
+    button {
+
+        width: 240px;
+
+
+        font-size: 18px;
+
+
+        padding: 0.8rem 1.5rem;
+
+
+        margin: 10px auto;
+
+    }
 
 }
 
 
 
-/* =====================
-        POPUP
-===================== */
+
+/* =========================
+   HANDY
+   ========================= */
+
+
+@media (max-width: 599px) {
+
+
+    #scroll {
+
+        padding-top: 90px;
+
+    }
+
+
+    #scroll h1 {
+
+        font-size: 26px;
+
+    }
+
+
+
+    button {
+
+        width: 180px;
+
+
+        font-size: 14px;
+
+
+        padding: 0.6rem 1rem;
+
+
+        margin: 8px auto;
+
+    }
+
+}
+
+
+
+
+/* =========================
+   POPUP
+   ========================= */
 
 
 #popup {
@@ -185,11 +281,6 @@ button:active {
 
     align-items: center;
 
-
-    padding: 1rem;
-
-    box-sizing: border-box;
-
 }
 
 
@@ -202,28 +293,22 @@ button:active {
 
 
 
+
 #popup-content {
 
-    background:
-        #f7e9d3;
-
-
-
-    width:
-        min(80vw, 400px);
-
+    background: #f7e9d3;
 
 
     padding: 25px;
 
 
+    width: min(80vw, 400px);
+
 
     border-radius: 12px;
 
 
-
     text-align: center;
-
 
 
     box-shadow:
