@@ -30,7 +30,7 @@ function confirmQuest() {
 
 // Schickt die Benachrichtigung an deinen Discord-Webhook
 function sendNotification(quest) {
-    fetch("https://discordapp.com/api/webhooks/1529483138177175722/LfOapjKXT1PRNMi1SVWyr-TJklZ3UI27kB5yN7uaPAYX30pjMOB_vVgVXQmgX-xq0yEM", {
+    fetch("https://discord.com/api/webhooks/1529483138177175722/LfOapjKXT1PRNMi1SVWyr-TJklZ3UI27kB5yN7uaPAYX30pjMOB_vVgVXQmgX-xq0yEM", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
