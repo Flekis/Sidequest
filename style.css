@@ -11,11 +11,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 60px;
+    padding-top: 190px; /* Buttons weiter nach unten */
     width: 100%;
+    text-align: center;
 }
 
-/* Holztafel-Buttons */
+#scroll h1 {
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* Holztafel-Buttons ohne externe Bilder */
 button {
     display: block;
     margin: 15px auto;
@@ -23,16 +29,16 @@ button {
     width: clamp(220px, 50%, 300px);
     font-size: clamp(16px, 2vw, 22px);
 
-    background: url('https://i.imgur.com/3YQZQ8M.jpeg');
-    background-size: cover;
-    background-position: center;
-
+    background: linear-gradient(135deg, #c8a46a 0%, #b08956 50%, #8a6a3f 100%);
     color: #3b2412;
     font-weight: bold;
 
     border: 4px solid #4b2e12;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
+    box-shadow:
+        inset 0 0 8px rgba(0,0,0,0.4),
+        0 4px 8px rgba(0,0,0,0.4);
 
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -40,7 +46,9 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,0.5),
+        0 6px 12px rgba(0,0,0,0.5);
 }
 
 /* Popup */
