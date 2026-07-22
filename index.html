@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidequest Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="scroll">
+    <h1>Wähle deine Sidequest</h1>
+
+    <button onclick="openQuest('Wilhelma')">Wilhelma</button>
+    <button onclick="openQuest('Jojos & Kochen')">Jojos & Kochen</button>
+    <button onclick="openQuest('Nolan\'s Odyssey')">Nolan's Odyssey</button>
+    <button onclick="openQuest('Therme (Schulter-Reha)')">Therme (Schulter-Reha)</button>
+    <button onclick="openQuest('Baseball Abendspiel')">Baseball Abendspiel</button>
+</div>
+
+<div id="popup" class="hidden">
+    <div id="popup-content">
+        <h2 id="quest-title"></h2>
+        <p id="quest-text"></p>
+
+        <button onclick="closePopup()">Zurück</button>
+        <button onclick="confirmQuest()">Confirm</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
