@@ -22,7 +22,7 @@ body {
 
 
 /* =========================
-   STANDARD PC 1920x1080
+   PC STANDARD 1920x1080
    ========================= */
 
 
@@ -78,12 +78,15 @@ body {
 
 
 
+
+
 /* =========================
    BUTTONS STANDARD
    ========================= */
 
 
 button {
+
 
     display: block;
 
@@ -154,6 +157,7 @@ button {
 
 button:hover {
 
+
     transform: scale(1.05);
 
 
@@ -164,6 +168,8 @@ button:hover {
         0 6px 12px rgba(0,0,0,0.5);
 
 }
+
+
 
 
 
@@ -195,6 +201,7 @@ button:hover {
 
     button {
 
+
         width: 270px;
 
 
@@ -214,23 +221,19 @@ button:hover {
 
 
 
+
+
 /* =========================
-   HANDY
-   bis 599px
+   HANDY QUERFORMAT
    ========================= */
 
 
-@media (max-width: 599px) {
+@media (max-width: 599px) and (orientation: landscape) {
 
 
     #scroll {
 
-        /*
-        bleibt nahe an der PC Position,
-        damit es auf der Rolle bleibt
-        */
-
-        padding-top: 170px;
+        padding-top: 90px;
 
     }
 
@@ -238,7 +241,7 @@ button:hover {
 
     #scroll h1 {
 
-        font-size: 38px;
+        font-size: 30px;
 
     }
 
@@ -247,25 +250,75 @@ button:hover {
     button {
 
 
-        /*
-        nicht zu klein,
-        weil die Schriftrolle groß bleibt
-        */
-
-        width: 250px;
+        width: 210px;
 
 
-        font-size: 18px;
+        font-size: 16px;
 
 
-        padding: 0.8rem 1.5rem;
+        padding: 0.7rem 1.2rem;
 
 
-        margin: 10px auto;
+        margin: 7px auto;
 
     }
 
 }
+
+
+
+
+
+
+
+
+/* =========================
+   HANDY HOCHKANT
+   ========================= */
+
+
+@media (max-width: 599px) and (orientation: portrait) {
+
+
+    #scroll {
+
+
+        padding-top: 230px;
+
+    }
+
+
+
+    #scroll h1 {
+
+
+        font-size: 32px;
+
+    }
+
+
+
+
+    button {
+
+
+        width: 230px;
+
+
+        font-size: 16px;
+
+
+        padding: 0.7rem 1.2rem;
+
+
+        margin: 8px auto;
+
+    }
+
+}
+
+
+
 
 
 
@@ -277,6 +330,7 @@ button:hover {
 
 
 #popup {
+
 
     display: none;
 
@@ -297,12 +351,13 @@ button:hover {
 
     align-items: center;
 
-
 }
 
 
 
+
 #popup.show {
+
 
     display: flex;
 
@@ -315,20 +370,27 @@ button:hover {
 
 
     background:
+
         #f7e9d3;
+
 
 
     padding: 25px;
 
 
+
     width:
+
         min(80vw, 400px);
+
 
 
     border-radius: 12px;
 
 
+
     text-align: center;
+
 
 
     box-shadow:
@@ -336,3 +398,4 @@ button:hover {
         0 4px 10px rgba(0,0,0,0.4);
 
 }
+
