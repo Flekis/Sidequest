@@ -5,22 +5,28 @@ body {
     background-size: cover;
 }
 
+/* Container für Buttons */
 #scroll {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 40px;
 }
 
+/* Responsive Buttons */
 button {
     display: block;
     margin: 15px auto;
-    padding: 12px 25px;
-    font-size: 18px;
+    padding: 1rem 2rem;
+    font-size: clamp(16px, 2vw, 22px);
+    width: clamp(200px, 50%, 300px);
     background: #f2e4c6;
     border: 3px solid #4b2e12;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
+/* Popup Overlay */
 #popup {
     position: fixed;
     top: 0;
@@ -28,18 +34,22 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidden {
     display: none;
 }
 
+/* Popup Inhalt */
 #popup-content {
     background: #f7e9d3;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
     max-width: 400px;
-    margin: 100px auto;
     text-align: center;
 }
