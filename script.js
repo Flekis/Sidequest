@@ -1,6 +1,6 @@
 const questTexts = {
     "Wilhelma": "Uhh, also wollen wir doch Giraffen kidnappen gehen :O",
-    "Jojos & Kochen": "Warte immer noch auf dich, um Part 6 anfangen zu können. Ps. Dinonuggies ligen noch im TK.",
+    "Jojos & Kochen": "Warte immer noch auf dich, um Part 6 anfangen zu können. Ps. Dinonuggies liegen noch im TK.",
     "Nolan's Odyssey": "Ok, du willst also 3h halbnackte Männer anschauen die Boot fahren...",
     "Therme (Schulter-Reha)": "Du willst mich also halbnackt sehen... sus",
     "Baseball Abendspiel": "Hast du wirklich Lust von mir über meine alte Hyperfixation vollgeyapped zu werden..."
@@ -8,35 +8,47 @@ const questTexts = {
 
 let currentQuest = "";
 
-// Öffnet das Popup und zeigt die Questbeschreibung
+// Popup öffnen
 function openQuest(name) {
     currentQuest = name;
-    document.getElementById("quest-title").innerText = name;
-    document.getElementById("quest-text").innerText = questTexts[name];
-    document.getElementById("popup").classList.remove("hidden");
+
+    document.getElementById("quest-title").textContent = name;
+    document.getElementById("quest-text").textContent = questTexts[name];
+
+    document.getElementById("popup").classList.add("show");
 }
 
-// Schließt das Popup
+// Popup schließen
 function closePopup() {
-    document.getElementById("popup").classList.add("hidden");
+    document.getElementById("popup").classList.remove("show");
 }
 
-// Wird ausgeführt, wenn sie "Confirm" klickt
+// Quest bestätigen
 function confirmQuest() {
-    sendNotification(currentQuest); // Discord-Benachrichtigung
-    alert("Sidequest bestätigt: " + currentQuest);
+    sendNotification(currentQuest);
+
+    alert("🎉 Sidequest bestätigt!\n\n" + currentQuest);
+
     closePopup();
 }
 
-// Schickt die Benachrichtigung an deinen Discord-Webhook
+// Discord-Webhook
 function sendNotification(quest) {
-    fetch("https://discord.com/api/webhooks/1529483138177175722/LfOapjKXT1PRNMi1SVWyr-TJklZ3UI27kB5yN7uaPAYX30pjMOB_vVgVXQmgX-xq0yEM", {
+    fetch("DEIN_DISCORD_WEBHOOK", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            content: `Sie hat **${quest}** bestätigt!`
+            content: `🎮 **Sidequest angenommen!**\n\n**${quest}** wurde bestätigt.`
         })
+    })
+    .then(response => {
+        if (!response.ok) {
+            console.error("Webhook konnte nicht gesendet werden.");
+        }
+    })
+    .catch(error => {
+        console.error("Fehler:", error);
     });
 }
