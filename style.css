@@ -1,401 +1,189 @@
 body {
-
     margin: 0;
-
     font-family: Papyrus, serif;
 
-
     background:
-        url('scroll.jpeg')
+        url("scroll.jpeg")
         no-repeat
         center center
         fixed;
 
-
     background-size: cover;
 
-
     overflow-x: hidden;
-
 }
-
-
 
 /* =========================
-   PC STANDARD 1920x1080
+   PC STANDARD
    ========================= */
 
-
 #scroll {
-
     display: flex;
-
     flex-direction: column;
 
-
+    justify-content: center;
     align-items: center;
 
-
-    justify-content: flex-start;
-
-
-    padding-top: 190px;
-
-
     width: 100%;
-
-
-    min-height: 100vh;
-
+    min-height: 100dvh;
 
     text-align: center;
-
-
     box-sizing: border-box;
-
 }
 
-
-
 #scroll h1 {
-
-    margin: 0;
-
-
-    padding-top: 10px;
-
+    margin: 0 0 20px 0;
 
     font-size: 48px;
-
-
     color: #2f1d0d;
-
 
     text-shadow:
         2px 2px 4px rgba(255,255,255,0.3);
-
 }
 
-
-
-
-
 /* =========================
-   BUTTONS STANDARD
+   BUTTONS
    ========================= */
-
 
 button {
 
-
     display: block;
-
 
     width: 300px;
 
-
     margin: 15px auto;
-
 
     padding: 1rem 2rem;
 
-
     font-size: 22px;
 
-
     font-family: Papyrus, serif;
-
-
     font-weight: bold;
 
-
-
     background:
-
-    linear-gradient(
-        135deg,
-        #c8a46a 0%,
-        #b08956 50%,
-        #8a6a3f 100%
-    );
-
-
+        linear-gradient(
+            135deg,
+            #c8a46a 0%,
+            #b08956 50%,
+            #8a6a3f 100%
+        );
 
     color: #3b2412;
 
-
-
-    border:
-
-    4px solid #4b2e12;
-
-
+    border: 4px solid #4b2e12;
 
     border-radius: 12px;
 
-
-
     box-shadow:
-
         inset 0 0 8px rgba(0,0,0,0.4),
-
         0 4px 8px rgba(0,0,0,0.4);
 
-
-
     cursor: pointer;
-
-
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
-
 }
-
-
 
 button:hover {
-
-
     transform: scale(1.05);
 
-
     box-shadow:
-
         inset 0 0 10px rgba(0,0,0,0.5),
-
         0 6px 12px rgba(0,0,0,0.5);
-
 }
-
-
-
-
-
 
 /* =========================
    TABLET
-   600px - 1199px
    ========================= */
-
 
 @media (min-width: 600px) and (max-width: 1199px) {
 
-
-    #scroll {
-
-        padding-top: 180px;
-
-    }
-
-
-
     #scroll h1 {
-
         font-size: 42px;
-
     }
-
-
 
     button {
-
-
         width: 270px;
-
-
         font-size: 20px;
-
-
         padding: 0.9rem 1.8rem;
-
-
         margin: 12px auto;
-
     }
-
 }
-
-
-
-
-
-
 
 /* =========================
    HANDY QUERFORMAT
    ========================= */
 
-
 @media (max-width: 599px) and (orientation: landscape) {
 
-
-    #scroll {
-
-        padding-top: 90px;
-
-    }
-
-
-
     #scroll h1 {
-
         font-size: 30px;
-
     }
-
-
 
     button {
-
-
         width: 210px;
-
-
         font-size: 16px;
-
-
         padding: 0.7rem 1.2rem;
-
-
         margin: 7px auto;
-
     }
-
 }
-
-
-
-
-
-
-
 
 /* =========================
    HANDY HOCHKANT
    ========================= */
 
-
 @media (max-width: 599px) and (orientation: portrait) {
 
-
     #scroll {
-
-
-        padding-top: 530px;
-
+        transform: translateY(80px);
     }
-
-
 
     #scroll h1 {
-
-
         font-size: 40px;
-
     }
-
-
-
 
     button {
-
-
         width: 270px;
-
-
         font-size: 19px;
-
-
         padding: 0.9rem 1.5rem;
-
-
         margin: 10px auto;
-
     }
-
 }
-
-
-
-
-
-
-
 
 /* =========================
    POPUP
    ========================= */
 
-
 #popup {
-
 
     display: none;
 
-
     position: fixed;
-
 
     inset: 0;
 
-
-    background:
-        rgba(0,0,0,0.6);
-
-
+    background: rgba(0,0,0,0.6);
 
     justify-content: center;
-
-
     align-items: center;
-
 }
-
-
-
 
 #popup.show {
-
-
     display: flex;
-
 }
-
-
-
 
 #popup-content {
 
-
-    background:
-
-        #f7e9d3;
-
-
+    background: #f7e9d3;
 
     padding: 25px;
 
-
-
-    width:
-
-        min(80vw, 400px);
-
-
+    width: min(80vw, 400px);
 
     border-radius: 12px;
 
-
-
     text-align: center;
 
-
-
-    box-shadow:
-
-        0 4px 10px rgba(0,0,0,0.4);
-
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-
